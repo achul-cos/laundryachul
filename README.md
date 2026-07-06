@@ -8,6 +8,8 @@
 
 **Mewing Laundry** adalah aplikasi mobile untuk manajemen bisnis laundry yang dikembangkan menggunakan **Flutter** dengan state management **Provider**. Aplikasi ini menampilkan fitur autentikasi, dashboard, dan sistem CRUD data pelanggan yang terintegrasi dengan state lokal.
 
+Ini adalah Branch "Intergration-With-Backend"
+
 > ⚠️ **CATATAN PENTING:** Proyek ini adalah hasil pengerjaan singkat (5 jam) untuk keperluan **Tes Magang** pada posisi **Intern Developer** di **PT. Piposmart Digital Indonesia**. Proyek dirancang untuk mendemonstrasikan pemahaman dasar tentang Flutter development, state management, dan UI/UX design yang responsif.
 
 ---
