@@ -49,7 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
       Navigator.of(context).pushReplacementNamed('/dashboard');
     } else {
       setState(() {
-        _errorMessage = 'Email atau password salah!';
+        // _errorMessage = 'Email atau password salah!';
       });
     }
   }
@@ -98,6 +98,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderSide: BorderSide.none,
                       ),
                       prefixIcon: Icon(Icons.email, color: Colors.grey),
+
+                      errorStyle: const TextStyle(
+                        color: Colors.white54,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -126,6 +132,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         borderSide: BorderSide.none,
                       ),
                       prefixIcon: Icon(Icons.lock, color: Colors.grey),
+
+                      errorStyle: const TextStyle(
+                        color: Colors.white54,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 12,
+                      ),
                     ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
@@ -140,12 +152,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(height: 8),
 
                   // Error message
-                  if (_errorMessage != null)
+                  // V.1
+                  // if (_errorMessage != null)
+                  if (context.watch<AuthProvider>().errorMessage != null)
                     Padding(
                       padding: EdgeInsets.only(top: 8),
                       child: Text(
-                        _errorMessage!,
-                        style: TextStyle(color: Colors.yellow, fontSize: 12),
+                        context.watch<AuthProvider>().errorMessage!,
+                        style: TextStyle(color: Colors.white70, fontSize: 12),
                       ),
                     ),
                   SizedBox(height: 32),
